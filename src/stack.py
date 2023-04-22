@@ -24,8 +24,8 @@ class Stack:
 
         :param data: данные, которые будут добавлены на вершину стека
         """
-        new_node = Node(data, self.top)
-        self.top = new_node
+        node = Node(data, self.top)
+        self.top = node
 
     def pop(self):
         """
@@ -36,7 +36,8 @@ class Stack:
         if not self.top:
             return None
 
-        popped_node = self.top
-        self.top = self.top.next_node
+        else:
+            node = self.top
+            self.top = node.next_node
+            return node.data
 
-        return popped_node.data
