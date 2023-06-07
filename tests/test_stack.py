@@ -30,7 +30,6 @@ class TestNode(unittest.TestCase):
         self.assertEqual(stack.pop(), 'data1')
         self.assertEqual(stack.top, None)
 
-
     def test_pop_2(self):
         stack = Stack()
         stack.push('data1')
